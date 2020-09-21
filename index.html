@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collections and Nodelists</title>
+  </head>
+  <body>
+    <ul id="todo-list">
+      lxudfajsdb;asd
+      <!-- hey this is where the items are  -->
+      <li class="item">asdasd</li>
+      <li class="item">Item</li>
+    </ul>
+    <h2 class="todo-nr"></h2>
+    <!-- Javascript -->
+    <script>
+      // nodelist can hold diffrent types of nodes
+      // html collection only holds element nodes
+
+      //   const collectionItems = document.getElementsByClassName("item"); // html collection by classname
+      //   const nodeItems = document.querySelector("#todo-list"); // nodelist by querySelector
+
+      //   console.log(nodeItems.childNodes); // logs all child nodes of #todo-list
+      //   console.log(nodeItems.children); // items
+
+      // looping
+      const collectionItems = document.getElementsByClassName("item"); // returns a live collection, updates its self
+      const nodeItems = document.querySelectorAll(".item");
+
+      // for(item of nodeItems){ // loops over items with class of item
+      //     console.log(item);
+      // }
+      // for(item of collectionItems){ // loops over items with class of item
+      //     console.log(item);
+      // }
+
+      nodeItems.forEach(function (item) {
+        // also loops over items with a class of item
+        console.log(item);
+      });
+
+      collectionItems.forEach(function (item) {
+        // does not work with a html collection
+        console.log(item);
+      });
+    </script>
+  </body>
+</html>
